@@ -42,35 +42,7 @@ function setMineNumber(x, defaultValue) {
 }
 
 function Board(map, mineNumber) {
-  /*
-          Board accept two letiables, map which defines how the board is created,
-          If you feed Board with a canvas, it will fill it with cases,
-          If you feed Board with a number, it will create a square of zones starting top left
-          A board is composed of multiple independent square zones
-          example:
-
-                           North
-
-                  -------- board --------
-                   0  1  2  3  4  5  6  7
-                   8  9 10 11 12 13 14 15
-                  16 17 18 19 20 21 22 23
-          West    24 25 26 27 28 29 30 31     East
-                  32 33 34 35 36 37 38 39
-                  40 41 42 43 44 45 46 47
-                  48 49 50 51 52 53 54 55
-                  56 57 58 59 60 61 62 63
-
-                          South
-
-          64 - boardSize
-          8  - column
-
-           -- zoneSize
-           __                 __   __
-          |  | <- Padding -> |  | |  |
-           --                 --   --
-  */
+  
 
   this.column = Math.round(Math.sqrt(map)) || Math.floor((autoSize(map.width)));
   this.row = Math.round(Math.sqrt(map)) || Math.floor((autoSize(map.height)));
